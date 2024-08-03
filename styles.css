@@ -162,23 +162,22 @@ body {
 }
 
 #registries {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-  background-color: #E7E2DB;
-  padding: 1%;
-  font-size: clamp(0px, 2vw, 20px);
-  overflow: hidden; /* Hide scrollbars */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: #E7E2DB;
+    padding: 1%;
+    font-size: clamp(0px, 2vw, 20px);
 }
 
 #registries a, #registries img {
-  outline: none;
-  text-decoration: none;
-  width: 50%;
-  max-width: 250px;
-  transition: transform 0.5s ease;
+    outline: none;
+    text-decoration: none;
+    width: 25%;
+    max-width: 250px;
+    transition: transform 0.5s ease;
 }
 
 #registries a:hover, #registries img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #venue {
