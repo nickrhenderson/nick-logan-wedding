@@ -170,6 +170,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
     background-color: #E7E2DB;
     font-size: clamp(0px, 2vw, 20px);
+    padding-top: 1%;
     width: 100%;
 }
 
