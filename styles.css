@@ -182,7 +182,7 @@ body {
 
 #venue {
     padding-top: 5%;
-    padding-bottom: 50%;
+    padding-bottom: 35%;
     font-size: clamp(0px, 4vw, 20px);
     * {
         box-sizing: border-box;
@@ -204,15 +204,36 @@ body {
     }
     
     h1 {
-        font-size: min(20vh, 20vw);
+        font-size: min(15vh, 15vw);
         line-height: 1cap;
     }
 }
 
-#timeline {
-  padding: 1000px;
+/* Style for the sticky button */
+.sticky-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #EED4C3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: top 0.2s ease, scale 0.2s ease;
+  z-index: 100000000;
 }
 
+.sticky-button:hover {
+  scale: 1.2;
+}
+
+.sticky-button.move {
+  top: -40px;
+  z-index: 1;
+}
 
 /* Polaroid swing animation around the tack */
 @keyframes swing {

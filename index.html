@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>| Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
     <div class="background"></div> <!-- Gradient background div -->
@@ -18,6 +18,8 @@
         </div>
     </div>  
 
+    <a href="https://dateit.io/e/AvRm" class="sticky-button">RSVP</a>
+
     <div id="intro" class="section">
         <div data-fadeshow="quick-nav prev-next-nav slide-counter autoplay ken-burns">
 
@@ -29,7 +31,7 @@
             <!-- Slides -->
             <div class="fs-slides">
               <div class="fs-slide">
-                <div class="fs-slide-bg" style="background-image: url(images/Us1.gif);"></div>
+                <div class="fs-slide-bg" style="background-image: url(static/images/Us1.gif);"></div>
                 <!-- You can add content to slides (class names are not bound to CSS Fadeshow) -->
                 <div class="slide-content">
                   <h1>Nick & Logan</h1>
@@ -38,7 +40,7 @@
                 </div>
               </div>
               <div class="fs-slide">
-                <div class="fs-slide-bg" style="background-image: url(images/Us2.gif);"></div>
+                <div class="fs-slide-bg" style="background-image: url(static/images/Us2.gif);"></div>
                 <div class="slide-content">
                     <h1>Nick & Logan</h1>
                     <p>05 | 12 | 25</p>
@@ -46,7 +48,7 @@
                   </div>
               </div>
               <div class="fs-slide">
-                <div class="fs-slide-bg" style="background-image: url(images/Us3.gif);"></div>
+                <div class="fs-slide-bg" style="background-image: url(static/images/Us3.gif);"></div>
                 <div class="slide-content">
                     <h1>Nick & Logan</h1>
                     <p>05 | 12 | 25</p>
@@ -80,38 +82,35 @@
     </div>
 
     <div id="registries" class="section">
-        <div class='scroll'>
-            <a href="https://www.amazon.com/wedding/registry/22JR9LM3GFZQK">
-                <img src="images/Amazon.png" alt="Amazon Wedding Registry">
-            </a>        
-            <a href="https://www.target.com/gift-registry/gift/Henderson-wedding-registry0512">
-                <img src="images/Target.png" alt="Target Wedding Registry">
-            </a>
-            
-        </div>
+        <a href="https://www.amazon.com/wedding/registry/22JR9LM3GFZQK">
+            <img src="{{ url_for('static', filename='images/Amazon.PNG') }}" alt="Amazon Wedding Registry">
+        </a>        
+        <a href="https://www.target.com/gift-registry/gift/Henderson-wedding-registry0512">
+            <img src="{{ url_for('static', filename='images/Target.PNG') }}" alt="Target Wedding Registry">
+        </a>
     </div>     
 
     <div id="venue" style="position: relative; padding: 0;">
         <div class="polaroid-container" style="position: relative; left: 10%; display: inline-block;">
-            <img src="images/Tack.png" alt="Polaroid-Tack" class="polaroid-tack">
+            <img src="{{ url_for('static', filename='images/Tack.PNG') }}" alt="Polaroid-Tack" class="polaroid-tack">
             <div class="polaroid" style="transform: rotate(3deg); width: 100%;">
-                <img src="images/Building.png" alt="Polaroid" class="polaroid-image">
+                <img src="{{ url_for('static', filename='images/Building.png') }}" alt="Polaroid" class="polaroid-image">
                 <div class="polaroid-caption">The Rustic</div>
             </div>
         </div> 
 
         <div class="polaroid-container" style="position: relative; left: 20%; display: inline-block;">
-            <img src="images/Tack.png" alt="Polaroid-Tack" class="polaroid-tack">
+            <img src="{{ url_for('static', filename='images/Tack.PNG') }}" alt="Polaroid-Tack" class="polaroid-tack">
             <div class="polaroid" style="transform: rotate(8deg); width: 100%;">
-                <img src="images/Isle.png" alt="Polaroid" class="polaroid-image">
+                <img src="{{ url_for('static', filename='images/Isle.png') }}" alt="Polaroid" class="polaroid-image">
                 <div class="polaroid-caption">The Isle</div>
             </div>
         </div> 
 
         <div class="polaroid-container" style="position: relative; left: 30%; display: inline-block;">
-            <img src="images/Tack.png" alt="Polaroid-Tack" class="polaroid-tack">
+            <img src="{{ url_for('static', filename='images/Tack.PNG') }}" alt="Polaroid-Tack" class="polaroid-tack">
             <div class="polaroid" style="transform: rotate(10deg); width: 100%;">
-                <img src="images/Land.png" alt="Polaroid" class="polaroid-image">
+                <img src="{{ url_for('static', filename='images/Land.png') }}" alt="Polaroid" class="polaroid-image">
                 <div class="polaroid-caption">The View</div>
             </div>
         </div> 
@@ -122,10 +121,10 @@
         <p>The wedding will be held at "The Rustic Event Center". We plan on an outdoor wedding with the exception of poor weather. More information will be added once more details are planned out!</p>
     
         <!-- Map Container -->
-        <div id="map" style="height: 450px; width: 95%; margin: 0 auto;"></div>
+        <div id="map" style="height: 450px; width: 95%; margin: 0 auto; z-index: 1; margin-top: 0.5%;"></div>
         <p>2060 Woodburn Hay Rd, Hopkinsville, KY 42240</p>
-    </div>
-    
+    </div>   
+
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     
@@ -144,7 +143,7 @@
             .openPopup();
     </script>
 
-    <script src="script.js"></script>
-
+    <script src="static/script.js"></script>
+    
 </body>
 </html>
