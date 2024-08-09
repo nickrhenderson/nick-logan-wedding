@@ -153,6 +153,7 @@ body {
 #intro img {
   padding-top: 5%;
   max-width: 150px;
+  width: 25%;
 }
 
 @media (min-width: 1200px) {
