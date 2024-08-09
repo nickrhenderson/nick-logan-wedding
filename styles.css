@@ -150,6 +150,11 @@ body {
       }
 }
 
+#intro img {
+  padding-top: 5%;
+  max-width: 150px;
+}
+
 @media (min-width: 1200px) {
   h1,
   h2 {
@@ -207,32 +212,6 @@ body {
         font-size: min(15vh, 15vw);
         line-height: 1cap;
     }
-}
-
-/* Style for the sticky button */
-.sticky-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #EED4C3;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: top 0.2s ease, scale 0.2s ease;
-  z-index: 100000000;
-}
-
-.sticky-button:hover {
-  scale: 1.2;
-}
-
-.sticky-button.move {
-  top: -40px;
-  z-index: 1;
 }
 
 /* Polaroid swing animation around the tack */
