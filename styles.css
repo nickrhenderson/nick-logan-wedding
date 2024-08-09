@@ -332,7 +332,7 @@ body {
   @media (max-width: 500px) {
     [data-fadeshow~="prev-next-nav"] .fs-next-btn,
     [data-fadeshow~="prev-next-nav"] .fs-prev-btn {
-      width: 50%;
+      width: 25%;
     }
   }
   [data-fadeshow~="prev-next-nav"] .fs-next-btn:before,
